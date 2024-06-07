@@ -22,7 +22,3 @@ class Computer
 
 end
 
-comp = Computer.new
-comp.code_maker
-comp.del_previous_color
-comp.code_maker
