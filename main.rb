@@ -59,4 +59,4 @@ until count == 11
     count += 1
 end
 
-puts p computer.colorCode
+puts p "This was computer's code #{computer.colorCode}"
