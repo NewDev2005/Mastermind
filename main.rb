@@ -2,10 +2,12 @@ require 'colorize'
 require_relative 'classes/game_board'
 require_relative 'classes/computer'
 require_relative 'classes/player'
+
 puts "WELCOME TO MASTERMIND"
 puts "ENTER ONE COLOR AT A TIME"
 puts "Make your guess based on these colors"
 puts "red".colorize(:red),"blue".colorize(:blue),"black".colorize(:black),"green".colorize(:green),"yellow".colorize(:yellow), "magenta".colorize(:magenta),"cyan".colorize(:cyan),"white".colorize(:white)
+
 board = GameBoard.new
 computer = Computer.new
 human_player = Player.new
