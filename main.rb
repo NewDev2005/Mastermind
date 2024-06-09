@@ -3,14 +3,19 @@ require_relative 'classes/game_board'
 require_relative 'classes/computer'
 require_relative 'classes/player'
 
+board = GameBoard.new
+computer = Computer.new
+human_player = Player.new
+
+puts "enter 0 if you wish to be the Code_Breaker or 1 if you wish to be the Code_Maker "
+user_input = gets.chomp.to_i
+
+if user_input == 0
 puts "WELCOME TO MASTERMIND"
 puts "ENTER ONE COLOR AT A TIME"
 puts "Make your guess based on these colors"
 puts "red".colorize(:red),"blue".colorize(:blue),"black".colorize(:black),"green".colorize(:green),"yellow".colorize(:yellow), "magenta".colorize(:magenta),"cyan".colorize(:cyan),"white".colorize(:white)
 
-board = GameBoard.new
-computer = Computer.new
-human_player = Player.new
 
 computer.code_maker
 board.display_board
@@ -82,5 +87,16 @@ until count == 11
     human_player.del_pegs_color
     count += 1
 end
-
  puts "This was computer's code #{computer.colorCode}"
+end
+
+if user_input == 1
+    puts "You are the code Maker, so you gotta create your own code"
+    puts "ENTER ONE COLOR AT A TIME"
+    puts "Make your code based on these colors"
+    puts "red".colorize(:red),"blue".colorize(:blue),"black".colorize(:black),"green".colorize(:green),"yellow".colorize(:yellow), "magenta".colorize(:magenta),"cyan".colorize(:cyan),"white".colorize(:white)
+    
+    human_player.create_code
+    p human_player.colorCode    
+
+end
