@@ -21,15 +21,15 @@ class GameBoard
 
         
         puts x
-        puts " #{vertical_line} #{@pegs[36]}   #{vertical_line} #{@pegs[37]}   #{vertical_line} #{@pegs[38]}  #{vertical_line} #{@pegs[39]}  #{vertical_line} #{@hintPegs[36]}#{@hintPegs[37]}#{@hintPegs[38]}#{@hintPegs[39]}"
+        puts " #{vertical_line} #{@pegs[36]}   #{vertical_line} #{@pegs[37]}   #{vertical_line} #{@pegs[38]}  #{vertical_line} #{@pegs[39]}  #{vertical_line} #{@hintPegs[36]} #{@hintPegs[37]} #{@hintPegs[38]} #{@hintPegs[39]}"
         puts x
         puts " #{vertical_line} #{@pegs[32]}   #{vertical_line} #{@pegs[33]}   #{vertical_line} #{@pegs[34]}  #{vertical_line} #{@pegs[35]}  #{vertical_line} #{@hintPegs[32]} #{@hintPegs[33]} #{@hintPegs[34]} #{@hintPegs[35]}"
         puts x
-        puts " #{vertical_line} #{@pegs[28]}   #{vertical_line} #{@pegs[29]}   #{vertical_line} #{@pegs[30]}  #{vertical_line} #{@pegs[31]}  #{vertical_line} #{@hintPegs[28]}#{@hintPegs[29]}#{@hintPegs[30]}#{@hintPegs[31]}"
+        puts " #{vertical_line} #{@pegs[28]}   #{vertical_line} #{@pegs[29]}   #{vertical_line} #{@pegs[30]}  #{vertical_line} #{@pegs[31]}  #{vertical_line} #{@hintPegs[28]} #{@hintPegs[29]} #{@hintPegs[30]} #{@hintPegs[31]}"
         puts x
-        puts " #{vertical_line} #{@pegs[24]}   #{vertical_line} #{@pegs[25]}   #{vertical_line} #{@pegs[26]}  #{vertical_line} #{@pegs[27]}  #{vertical_line} #{@hintPegs[24]}#{@hintPegs[25]}#{@hintPegs[26]}#{@hintPegs[27]}"
+        puts " #{vertical_line} #{@pegs[24]}   #{vertical_line} #{@pegs[25]}   #{vertical_line} #{@pegs[26]}  #{vertical_line} #{@pegs[27]}  #{vertical_line} #{@hintPegs[24]} #{@hintPegs[25]} #{@hintPegs[26]} #{@hintPegs[27]}"
         puts x
-        puts " #{vertical_line} #{@pegs[20]}   #{vertical_line} #{@pegs[21]}   #{vertical_line} #{@pegs[22]}  #{vertical_line} #{@pegs[23]}  #{vertical_line} #{@hintPegs[20]}#{@hintPegs[21]}#{@hintPegs[22]}#{@hintPegs[23]}"
+        puts " #{vertical_line} #{@pegs[20]}   #{vertical_line} #{@pegs[21]}   #{vertical_line} #{@pegs[22]}  #{vertical_line} #{@pegs[23]}  #{vertical_line} #{@hintPegs[20]} #{@hintPegs[21]} #{@hintPegs[22]} #{@hintPegs[23]}"
         puts x
         puts " #{vertical_line} #{@pegs[16]}   #{vertical_line} #{@pegs[17]}   #{vertical_line} #{@pegs[18]}  #{vertical_line} #{@pegs[19]}  #{vertical_line} #{@hintPegs[16]} #{@hintPegs[17]} #{@hintPegs[18]} #{@hintPegs[19]}"
         puts x

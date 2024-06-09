@@ -1,5 +1,5 @@
 class Computer
-    attr_reader :colorCode
+    attr_accessor :colorCode
     def initialize
         @colorCode = []
     end
