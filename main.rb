@@ -9,7 +9,7 @@ human_player = Player.new
 
 puts "enter 0 if you wish to be the Code_Breaker or 1 if you wish to be the Code_Maker "
 user_input = gets.chomp.to_i
-
+valid_input = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
 if user_input == 0
 puts "WELCOME TO MASTERMIND"
 puts "ENTER ONE COLOR AT A TIME"
@@ -21,7 +21,7 @@ computer.code_maker
 board.display_board
 
 placeholder = computer.colorCode.clone
-valid_input = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
+# valid_input = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
 count = 1
 until count == 11
     
@@ -95,8 +95,57 @@ if user_input == 1
     puts "ENTER ONE COLOR AT A TIME"
     puts "Make your code based on these colors"
     puts "red".colorize(:red),"blue".colorize(:blue),"black".colorize(:black),"green".colorize(:green),"yellow".colorize(:yellow), "magenta".colorize(:magenta),"cyan".colorize(:cyan),"white".colorize(:white)
-    
-    human_player.create_code
-    p human_player.colorCode    
+    puts "\n"
 
+    human_player.create_code
+    human_code = human_player.colorCode
+    valid_feedback = [:red,:white,:black,:nil]
+    computer_guess = []
+    count = 1
+    until count == 11
+        if count == 1
+            x = 0
+            y = 3
+            j = 0
+        end
+
+        for i in (x..y)
+            guess = computer.colors_available[rand(0..7)]
+            board.pegs[i] = "\u25CF".colorize(guess)
+            computer_guess.push(guess)
+        end
+        board.display_board
+      
+        for i in (0..3)
+            human_feedback = gets.chomp.downcase.to_sym
+            until valid_feedback.include?(human_feedback)
+                human_feedback = gets.chomp.downcase.to_sym
+            end
+            if human_feedback == :nil
+                next
+            end
+            if count == 1
+            board.hintPegs[j] = "\u2547".colorize(human_feedback)
+            j += 1
+            else
+                j += 1
+                board.hintPegs[j] = "\u2547".colorize(human_feedback)
+            end
+        end
+
+        if computer_guess == human_code
+            board.display_board
+            puts "computer cracked your code!".colorize(:yellow)
+            break
+        end
+        x = y
+        j = y
+        y += 4
+        # board.display_board
+        count += 1
+        for i in (0..3)
+        computer_guess.pop
+        end
+    end
 end
+board.display_board
