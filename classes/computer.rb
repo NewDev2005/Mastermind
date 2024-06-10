@@ -1,14 +1,15 @@
 class Computer
-    attr_accessor :colorCode
+    attr_accessor :colorCode, :colors_available
     def initialize
         @colorCode = []
+        @colors_available = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
+      
     end
 
     def code_maker()
         count = 0
         while count < 4
-            colors_avilable = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
-            @colorCode.push(colors_avilable[rand(0..7)])
+            @colorCode.push(@colors_available[rand(0..7)])
             count += 1
         end
     end

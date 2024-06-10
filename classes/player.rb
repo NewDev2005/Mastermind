@@ -8,13 +8,13 @@ class Player
         @colorsAvailable = [:black,:red,:green,:yellow,:magenta,:cyan,:white,:blue]
     end
 
-    def del_pegs_color
+    def del_pegs_color()
         for i in (0..4)
          pegsColor.pop
         end
     end
 
-    def create_code
+    def create_code()
         for i in (0..3)
         player_input = gets.chomp.downcase.to_sym
         until @colorsAvailable.include?(player_input)
